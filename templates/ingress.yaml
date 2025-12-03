@@ -26,12 +26,11 @@ spec:
   rules:
     {{- range .Values.ingress.hosts }}
     - host: {{ .host | quote }}
+    {{- end }
       http:
         paths:
-          {{- range .paths }}
-          - path: {{ .path }}
-            pathType: {{ .pathType }}
-          {{- end }}
+          - path: /
+            pathType: Prefix
             backend:
               service:
                 name: {{ .Release.Name }}
