@@ -12,4 +12,4 @@ resources:
 ingress:
   className: "nginx-tietoevry"
   hosts:
-    - host: csa-whomai-2.dev.tietoevry.platform-engineer.cloud
+    - host: csa-whoami-2.dev.tietoevry.platform-engineer.cloud
