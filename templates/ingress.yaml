@@ -26,7 +26,7 @@ spec:
   rules:
     {{- range .Values.ingress.hosts }}
     - host: {{ .host | quote }}
-    {{- end }
+    {{- end }}
       http:
         paths:
           - path: /
@@ -36,5 +36,4 @@ spec:
                 name: {{ .Release.Name }}
                 port:
                   number: {{ .Values.service.port }}
-    {{- end }}
 {{- end }}
