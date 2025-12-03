@@ -13,8 +13,9 @@ service:
 
 ingress:
   enabled: true
-  className: nginx
+  className: ""
   annotations: {}
+  tls: []
 
 resources:
   requests:
